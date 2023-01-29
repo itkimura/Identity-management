@@ -157,11 +157,11 @@ public class IdentityManagementImpl implements IdentityManagement{
 
     boolean isValidParameter(PathAndParameters input) {
         if (input.path().equals("login"))
-            return (isValidConfirm(input.parameters()));
+            return (isValidLogin(input.parameters()));
         else if (input.path().equals("confirm"))
             return (isValidConfirm(input.parameters()));
         else if (input.path().equals("sign"))
-            return (isValidConfirm(input.parameters()));
+            return (isValidSign(input.parameters()));
         return false;
     }
 

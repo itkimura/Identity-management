@@ -10,6 +10,7 @@ import java.net.URL;
 public class App {
 
     public static void main(String[] args) {
-        //System.out.println(new RequestParser().getGreeting());
+        Client client = new Client("severa");
+        System.out.println(client.login());
     }
 }

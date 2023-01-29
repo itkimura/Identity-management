@@ -167,7 +167,7 @@ public class RequestParserTest {
         String str = "visma-identity://sign?source=vismasign&documentid=105ab44";
         URI uri = new URI(str);
         try {
-            var res = sut.requestParser(str);
+            var res = sut.identityManagement(str);
             var path = res.path();
             var p1 = res.parameters().get(0);
             var p2 = res.parameters().get(1);
@@ -187,7 +187,7 @@ public class RequestParserTest {
         String str = "visma-identity://sign?source=vismasign&documentid=hive";
         URI uri = new URI(str);
         Exception exception = assertThrows(Exception.class, () -> {
-            sut.requestParser(str);
+            sut.identityManagement(str);
         });
         String correctException = "It is not a valid query parameter";
         assertTrue(exception.getMessage().equals(correctException), "Should return true");
