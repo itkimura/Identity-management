@@ -12,23 +12,23 @@ I understand that the solution for this problem
 1. Validation of URI 
 - validate URI format
 - validate scheme and path
-2. Parse stirng into object (I used Java <a href="https://docs.oracle.com/javase/7/docs/api/java/net/URI.html">class URI</a> instead of parsing everything manually)
+2. Parse string into object (I used Java <a href="https://docs.oracle.com/javase/7/docs/api/java/net/URI.html">class URI</a> instead of parsing everything manually)
 3. Validate requirements 
 - login:source(type:string)
 - confirm:source(type:string)&payment number(type:integer)
 - sign:source(type: string)&documentid(type:string)
-4. return path and parameters when input is valid or throw exceptions.
+4. return path and parameters when input is valid or throws exceptions.
 
 
 <img src="https://user-images.githubusercontent.com/61685238/215349772-fefdb20b-4939-4b6e-9b65-40aaa94d5956.jpg" width="900"></img>
 ## Challenges
-1. I built the first solution without the data class and failed with some tests. So I added new classes for returning path and parameters and also parameter class, it now handles errors and does not cause exceptions.  
-2. There were many conditional expressions which are hard to understand by others. So I decided to add separate function to test requirements for queries. It looks simpler and readable.
-3. I was not sure about the requirement of client ```"Implementation needs to have a client, which uses the new class. You can for example implement the client as another class that uses the relevant methods"``` So I made the client which uses my identity management, however there are improvement possibilities.
+1. I built the first solution without the data class and failed some tests. So I added new classes for returning path and parameters and also parameter class, it now handles errors and does not cause exceptions.  
+2. There were many conditional expressions which are hard to understand by others. So I decided to add separate functions to test requirements for queries. It looks simpler and readable.
+3. I was not sure about the requirement of the client ```"Implementation needs to have a client, which uses the new class. You can for example implement the client as another class that uses the relevant methods"``` So I made the client which uses my identity management, however, there are improvement possibilities.
 
 ## Possible Improvement
 
-1. The example URIs is missing authority (user information & host) info. My solution can handle when the authority is missing. If the URI contains authority, need to improve parsing. Example:
+1. The example URIs are missing authority (user information & host) info. My solution can handle when the authority is missing. If the URI contains authority, need to improve parsing. Example:
 
 
   <img src="https://user-images.githubusercontent.com/61685238/215346655-b3c71357-4590-4e1a-a77a-67afdecb7ce4.jpg" width="600"></img>
@@ -36,4 +36,4 @@ I understand that the solution for this problem
 
 
 2. The client doesn't log errors. It would be better to log errors.
-3. The client should be more configurable. At the moment, it is hard coded base URI.
+3. The client should be more configurable. At the moment, it is hardcoded base URI.
