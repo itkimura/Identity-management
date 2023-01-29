@@ -20,6 +20,7 @@ I understand that the solution for this problem
 4. return path and parameters when input is valid or throw exceptions.
 
 
+<img src="https://user-images.githubusercontent.com/61685238/215349772-fefdb20b-4939-4b6e-9b65-40aaa94d5956.jpg" width="900"></img>
 ## Challenges
 1. I built the first solution without the data class and failed with some tests. So I added new classes for returning path and parameters and also parameter class, it now handles errors and does not cause exceptions.  
 2. There were many conditional expressions which are hard to understand by others. So I decided to add separate function to test requirements for queries. It looks simpler and readable.
